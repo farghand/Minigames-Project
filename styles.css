@@ -1,21 +1,46 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-    margin: 0;
-  
-    background: #efefbb;
-    background: -webkit-linear-gradient(to right, #f4ff91, #f5937b);
-    background: linear-gradient(to right, #f4ff91, #f5937b);
-  }
-  
-  h1 {
-    letter-spacing: 3px;
-  }
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 0;
+
+  background: #efefbb;
+  background: linear-gradient(to right, #6eedf6, #72ff9c);
+}
+
+h1 {
+  letter-spacing: 3px;
+}
+
+/* Mini-game Button Styling */
+
+.mini-game-button {
+  display: inline-block;
+  text-align: center;
+  border-radius: 2em;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: black;
+  background-color: purple;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mini-game-button:hover {
+  transition: 1s;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(211, 91, 211);
+  border-color: white;
+}

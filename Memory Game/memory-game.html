@@ -1,18 +1,23 @@
 <html>
   <head>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="memory-game-styles.css" />
     <title>Memory Game</title>
   </head>
   <body>
     <h1>Memory Game</h1>
     <div id="mini-game-list" class="btn-group">
       <button
-        id="mini-game-button"
+        id="main-menu-button"
         class="mini-game-button"
-        onclick="location.href ='index.html';"
+        onclick="location.href = '../index.html';"
       >
         Return to Main Menu
       </button>
     </div>
+
+    <h3>Score: <span id="result"></span></h3>
+
+    <div class="grid"></div>
   </body>
+  <script src="memory-game.js"></script>
 </html>

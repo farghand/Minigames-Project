@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let cardChosenId = [];
     let cardsWon = [];
 
+    // Creates all cards on board
     function createBoard() {
         for(let i = 0; i < cardArray.length; i++) {
             const card = document.createElement('img');
@@ -85,23 +86,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Check for match sets two variables to the Id that was set in the createBoard function
+    // Then it looks to see if they are the same object
+    // If they are then the image turns white and the two cards are pushed as an array onto cardsWon
+    // Score is measured by length of array
     function checkForMatch() {
         const cards = document.querySelectorAll('img');
-        const firstCardId = cardChosen[0];
-        const secondCardId = cardChosen[1];
+        const firstCardId = cardChosenId[0];
+        const secondCardId = cardChosenId[1];
+        console.log(cardsWon.length);
         
         if(cardChosen[0] === cardChosen[1]) {
             alert('You found a match!');
             cards[firstCardId].setAttribute('src', 'Memory Game Images/white.png');
             cards[secondCardId].setAttribute('src', 'Memory Game Images/white.png');
             cardsWon.push(cardChosen);
+            console.log(cardsWon);
         } else {
             cards[firstCardId].setAttribute('src', 'Memory Game Images/blank.jpg');
             cards[secondCardId].setAttribute('src', 'Memory Game Images/blank.jpg');
             alert('Sorry Try Again');
         }
 
-        cardsChosen = [];
+        cardChosen = [];
         cardChosenId = [];
         resultDisplay.textContent = cardsWon.length;
         
@@ -110,6 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Function pushes Id of card to cardChosen and cardChosenId arrays
+    // Then calls for checkForMatch once two cards are chosen
     function flipCard() {
         let cardId = this.getAttribute('data-id');
         cardChosen.push(cardArray[cardId].name);
